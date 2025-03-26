@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firma Budowlana - Profesjonalne Usługi Budowlane</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+section {
+    padding: 20px 0;
+    background: #fff;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex-grow: 1; /* Allow section to grow and push footer down */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 30px;
+    width: 70%;
+    max-width: 900px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+
+.modal img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #aaa;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ff0000;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.modal-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Nowy styl dla dużego footera */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .footer-container .column {
+    flex: 1 1 250px; /* Makes the columns flexible */
+    padding: 10px;
+}
+
+footer .footer-container .column h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+footer .footer-container .column p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+footer .footer-container .column .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+footer .footer-container .column .social-icons a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-container .column .social-icons a:hover {
+    color: #ff0000;
+}
+
+footer .footer-container .column .contact {
+    font-size: 14px;
+}
+
+footer .footer-container .column .contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer-container .column .contact a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-bottom {
+    margin-top: 30px;
+    font-size: 14px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Firma Budowlana</h1>
+        </div>
+    </header>
+    
+    <section id="realizacje">
+        <div class="container">
+            <h2>Nasze Usługi</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="./img/MainBefore.jpg" alt="Budowa domów" onclick="openModal('Budowa domów', 'Kompleksowa budowa nowoczesnych domów. W naszej ofercie znajdują się usługi budowy domów jednorodzinnych, mieszkań, a także obiektów usługowych. Zajmujemy się także przygotowaniem dokumentacji projektowej oraz pomocą w uzyskaniu wszelkich pozwoleń budowlanych. Wszystkie prace wykonujemy zgodnie z obowiązującymi normami budowlanymi i w terminie.', './img/MainBefore.jpg')">
+                    <p>Budowa domów</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/MainBefore.jpg" alt="Remonty" onclick="openModal('Remonty', 'Profesjonalne remonty wnętrz i elewacji. Oferujemy kompleksowe remonty mieszkań, biur oraz domów. Nasze usługi obejmują remonty generalne, wymianę instalacji, malowanie, tynkowanie, układanie płytek oraz inne prace budowlane, które przywrócą Twoim wnętrzom nowy blask.', './img/MainBefore.jpg')">
+                    <p>Remonty</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/MainBefore.jpg" alt="Instalacje elektryczne" onclick="openModal('Instalacje elektryczne', 'Montaż i modernizacja instalacji elektrycznych. Zajmujemy się instalacją systemów elektrycznych w nowoczesnych budynkach oraz modernizacją istniejących instalacji. Dostosowujemy instalacje do indywidualnych potrzeb klientów, zapewniając pełne bezpieczeństwo i zgodność z normami.', './img/MainBefore.jpg')">
+                    <p>Instalacje elektryczne</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/MainBefore.jpg" alt="Hydraulika" onclick="openModal('Hydraulika', 'Usługi hydrauliczne i instalacje wodne. Specjalizujemy się w montażu oraz modernizacji instalacji wodno-kanalizacyjnych. Oferujemy również usługi naprawcze związane z wymianą rur, naprawą przecieków oraz montażem armatury.', './img/MainBefore.jpg')">
+                    <p>Hydraulika</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/MainBefore.jpg" alt="Układanie kostki" onclick="openModal('Układanie kostki', 'Profesjonalne układanie kostki brukowej. Wykonujemy prace związane z układaniem kostki brukowej w ogrodach, na podjazdach oraz chodnikach. Gwarantujemy trwałość, estetykę oraz precyzję wykonania. Nasze usługi obejmują również przygotowanie podłoża i obrzeży.', './img/MainBefore.jpg')">
+                    <p>Układanie kostki</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/MainBefore.jpg" alt="Tynki i elewacje" onclick="openModal('Tynki i elewacje', 'Nowoczesne tynki i fasady. Oferujemy wykonanie tynków wewnętrznych i zewnętrznych oraz elewacji. Stosujemy wysokiej jakości materiały, które zapewniają estetykę i trwałość. Dzięki naszym usługom, Twoja budowla będzie wyglądać nowocześnie i będzie odporna na warunki atmosferyczne.', './img/MainBefore.jpg')">
+                    <p>Tynki i elewacje</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-text" class="modal-text"></p>
+            <div class="contact-info">
+                <p><strong>Kontakt:</strong></p>
+                <p>Telefon: +48 123 456 789</p>
+                <p>Email: <a href="mailto:kontakt@firnabudowlana.pl">kontakt@firnabudowlana.pl</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="column">
+                <h3>Firma Budowlana</h3>
+                <p>Profesjonalne usługi budowlane. Jesteśmy ekspertami w zakresie budowy domów, remontów, instalacji i innych usług budowlanych.</p>
+            </div>
+            <div class="column">
+                <h3>Kontakt</h3>
+                <p>Telefon: +48 123 456 789</p>
+                <p>Email: <a href="mailto:kontakt@firnabudowlana.pl">kontakt@firnabudowlana.pl</a></p>
+            </div>
+            <div class="column">
+                <h3>Social Media</h3>
+                <div class="social-icons">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Firma Budowlana. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+    <script>
+        function openModal(title, text, imageSrc) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-text').textContent = text;
+            document.getElementById('modal-image').src = imageSrc;
+            document.getElementById('modal').style.display = 'block';
+        }
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+        window.onclick = function(event) {
+            var modal = document.getElementById('modal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
