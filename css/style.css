@@ -2,13 +2,29 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #5f5f5f;
+    color: white;
 }
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); 
+    border-radius: 8px;
+    background-color: #252525;
+ 
+}
+
+h2{
+    color: white;
+}
+
+
+.img-logo{
+    width: 200px;
 }
 header {
     background: #333;
@@ -33,14 +49,177 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
 }
+
+.nav-links{
+    margin-left: 600px;
+    position: relative;
+}
 section {
-    padding: 20px 0;
-    background: #fff;
+    display: flex;
+    align-items: center;
+    height: 300px;
+
+    padding-bottom: 100px;
+    background: #3f3f3f;
     margin: 20px 0;
-    border-radius: 8px;
+    border-radius: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    display: flex;
+    align-items: center;
+    
 }
+
+.container-realizacje{
+display: flex;
+flex-direction: column;
+
+}
+
+
+
+
+
+
+
+
+
+.container-Kontakt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 20px;
+    background: #3f3f3f;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5); 
+
+
+
+}
+
+.Kontakt-items{
+    margin-top: 90px;
+    align-items: center;
+    
+
+    display: flex;
+
+}
+
+.kontakt-link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.kontakt-link:hover {
+    text-decoration: none;
+    color: white;
+    transform: scale(1.08);
+}
+
+.kontakt-img{
+    border-radius: 20px;
+    margin-left: 45px;
+    width: 900px;
+
+    
+}
+
+.click-kontakt{
+    width: 50px;
+    rotate: 250deg;
+    margin-right: -40px;
+
+}
+
+.kontakt-adres{
+    margin-left: 400px;
+}
+
+.kontakt-adres-title{
+    margin-top: -100px;
+font-size: 20px;
+color: #FDF7F4;
+}
+
+.kontakt-title{
+    font-size: 50px;
+    margin-left: 50px;
+
+}
+
+.kontakt-facebook-title{
+    margin-top: 100px;
+    font-size: 20px;
+    color: #FDF7F4;
+}
+
+.facebook-link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: transform 0.3s, color 0.3s;
+    display: inline-block;
+}
+
+.facebook-link:hover {
+    text-decoration: none;
+    color: white;
+    transform: scale(1.08);
+}
+
+.click-kontakt-facebook{
+    width: 50px;
+    rotate: 110deg;
+    margin-left: -45px;
+    color: white;
+    
+    
+}
+
+hr{
+
+width: 300px;
+height: 0.5px;
+background-color: black;
+margin-right: auto;
+margin-left: auto;
+margin-top: 5px;
+margin-bottom: 5px;
+border-width: 2px;
+border-color: white;
+}
+
+.line-kontakt{
+    margin-top: 20px;
+}
+
+.telefon-link{
+    margin-top: 35px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.realisation{
+    margin-bottom: 200px;
+}
+.realizacje{
+    height: 800px;
+}
+
 .gallery {
     display: flex;
     justify-content: center;
@@ -58,4 +237,36 @@ footer {
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
+    padding-bottom: 500px;
+}
+
+
+/* ======= */
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-left: 0;
+        position: static;
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .img-logo {
+        width: 150px; 
+    }
 }
