@@ -5,29 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Firma Budowlana - Profesjonalne Usługi Budowlane</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+
+
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container-header">
             <img src="./img/polecon.jpg" alt="" class="img-logo">
             <h1>Polecon</h1>
             <nav class="nav-links">
                 <ul>
                     <li><a href="#o-nas">O nas</a></li>
                     <li><a href="./uslugi.html">Usługi</a></li>
-                    <li><a href="#realizacje">Realizacje</a></li>
+                    <li><a href="./realizacje.html">Realizacje</a></li>
                     <li><a href="#kontakt">Kontakt</a></li>
                 </ul>
             </nav>
         </div>
+<div class="header-titles">
+    <h2 class="titles-main">Ponad 100 zrealizowanych inwestycji</h2>
+    <p class="titles-paragraph">8 lat doświadczenia przy pracy</p>
+</div>
+
     </header>
     
-    <section id="o-nas">
-        <div class="container">
-            <h2>O nas</h2>
-            <p>Jesteśmy firmą budowlaną z wieloletnim doświadczeniem, specjalizującą się w kompleksowych usługach budowlanych.</p>
-        </div>
-    </section>
+
     
 
         <div class="container-Kontakt">
@@ -67,16 +72,28 @@
         </div>
 
     
-    <section class="realizacje">
-        <div class="container-realizacje">
-            <h2 class="realisation">Nasze Realizacje</h2>
-            <div class="gallery">
-                <img src="./img/MainBefore.jpg" alt="Realizacja 1">
-                <img src="./img/MainBefore.jpg" alt="Realizacja 2">
-                <img src="./img/MainBefore.jpg" alt="Realizacja 3">
+
+<!-- ============================================= -->
+
+
+        <section id="news">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/dom.png" alt="Zdjęcie przed 1"></div>
+                    <div class="swiper-slide"><img src="./img/dom.png" alt="Zdjęcie po 1"></div>
+                    <div class="swiper-slide"><img src="./img/dom.png" alt="Zdjęcie przed 2"></div>
+                    <div class="swiper-slide"><img src="./img/dom.png" alt="Zdjęcie po 2"></div>
+
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
             </div>
-        </div>
-    </section>
+      
+        </section>
+
+
+        <!-- ============================================= -->
     
     <section id="kontakt">
         <div class="container">
@@ -92,5 +109,10 @@
             <p>&copy; 2025 Firma Budowlana. Wszelkie prawa zastrzeżone.</p>
         </div>
     </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
