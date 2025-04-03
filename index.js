@@ -37,3 +37,47 @@ var swiper = new Swiper(".mySwiper", {
       }
   }
 });
+
+
+
+window.addEventListener("scroll", function() {
+    let header = document.querySelector(".container-header");
+    if (window.scrollY > 50) { 
+        header.style.backgroundColor = "rgba(0, 0, 0, 0.6)";
+    } else {
+        header.style.backgroundColor = "#000"; 
+    }
+});
+
+window.addEventListener("scroll", function() {
+    const header = document.querySelector(".container-header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("shrink");
+    } else {
+        header.classList.remove("shrink");
+    }
+});
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    let items = document.querySelectorAll(".O-nas-list-item");
+    let index = 0;
+    
+    function animateItem() {
+        items[index].classList.add("animate");
+        setTimeout(() => {
+            items[index].classList.remove("animate");
+            index = (index + 1) % items.length;
+            setTimeout(animateItem, 1500);
+        }, 500);
+    }
+    
+    animateItem();
+});
