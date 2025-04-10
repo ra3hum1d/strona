@@ -499,6 +499,9 @@ footer {
 
 .O-nas{
     margin-top: 150px;
+    background-image: url("./forest.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -569,6 +572,7 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
+    background-color:rgba(0, 0, 0, 0.5) ;
 }
 
 .O-nas-list-dest{
@@ -635,5 +639,230 @@ footer {
 
     .img-logo {
         width: 150px; 
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 480px) {
+    header {
+        height: 800px;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url("./dom\ \(1\)\ \(1\).png") ;
+        background-size: 110%;
+        transition: 1s;
+        background-repeat: no-repeat;
+        margin-bottom: 0px;
+    
+        
+    }
+    .img-logo{
+        width: 200px;
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-right: 40px;
+        margin-bottom: 20px;
+    }
+
+    .container-header {
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        height: 220px;
+        
+    
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    
+        padding: 20px 40px; 
+        transition: padding 0.3s ease, background-color 0.3s ease;
+    }
+
+    .nav-links-list{
+        position: absolute;
+        top: 170px;
+        
+        left: 100px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .titles-main{
+        font-size: 40px;
+    }
+
+    .titles-paragraph{
+        font-size: 20px;
+        margin-bottom: -500px;
+        margin-top: 40px;
+    }
+
+
+
+    .features{
+        width: 480px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .features-title{
+        margin-bottom: 130px;
+    }
+
+    
+
+    .features-list{
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 190px;
+        margin-bottom: 200px;
+    }
+
+
+
+    .swiper {
+        width: 100%;
+        height: 250px;
+        margin: 20px auto;
+    }
+
+    .swiper-slide {
+        width: 90%;
+        height: 100%;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        background: none;
+    }
+
+    .swiper-button-prev::before, .swiper-button-next::before {
+        font-size: 20px;
+        display: none;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        margin: 0;
+        display: none;
+    }
+
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .O-nas-img{
+        display: none;
+    }
+
+    .O-nas-list{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -130px;
+    gap: 35px;
+      
+        
+    }
+
+    .O-nas-container{
+        height: 1000px;
+        width: 480px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    
+    }
+
+    .O-nas-desc{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        margin-left: -30px;
+        margin-right: 20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .container-Kontakt {
+        padding: 20px;
+    }
+
+    .kontakt-title {
+        font-size: 36px;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .Kontakt-items {
+        flex-direction: column;
+        margin-top: 40px;
+        align-items: center;
+    }
+
+    .kontakt-img {
+        width: 90%;
+        margin-left: 0;
+        border-radius: 15px;
+    }
+
+    .kontakt-adres {
+        margin-left: 0;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .kontakt-adres-title,
+    .kontakt-facebook-title {
+        font-size: 18px;
+        margin-top: 30px;
+    }
+
+    .kontakt-link,
+    .facebook-link,
+    .telefon-link {
+        font-size: 18px;
+    }
+
+    hr {
+        width: 80%;
+    }
+
+    .line-kontakt {
+        margin-top: 15px;
     }
 }
