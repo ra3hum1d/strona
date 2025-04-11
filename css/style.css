@@ -614,49 +614,26 @@ footer {
 
 /* ======= */
 
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links {
-        margin-left: 0;
-        position: static;
-        width: 100%;
-    }
-
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .img-logo {
-        width: 150px; 
-    }
-}
-
-
-
-
-
-
-
-@media (max-width: 1024px) {
-
-}
-
-@media (max-width: 768px) {
-
-}
-
 @media (max-width: 480px) {
+
+    body {
+        max-width: 480px;
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+}
+
+/* Przykład dla obrazów i innych elementów – by nie przekraczały szerokości ekranu */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+    
     header {
         height: 800px;
         color: #fff;
@@ -672,7 +649,7 @@ footer {
     }
     .img-logo{
         width: 200px;
-        margin-left: 10px;
+        margin-left: -10px;
         margin-top: 20px;
         margin-right: 40px;
         margin-bottom: 20px;
@@ -684,7 +661,7 @@ footer {
         overflow: hidden;
         display: flex;
         align-items: center;
-        gap: 40px;
+        gap: 20px;
         height: 220px;
         
     
@@ -702,20 +679,36 @@ footer {
         position: absolute;
         top: 170px;
         
-        left: 100px;
+        left: 75px;
         display: flex;
         flex-direction: row;
         gap: 10px;
     }
 
     .titles-main{
-        font-size: 40px;
+        font-size: 35px;
+        margin-left: -45px;
     }
 
     .titles-paragraph{
         font-size: 20px;
-        margin-bottom: -500px;
+        
         margin-top: 40px;
+        margin-left: -40px;
+    }
+
+    header{
+        background-image: none;
+    }
+
+    .header-titles{
+        background-image: url("./dom\ \(1\)\ \(1\).png");
+        width: 480px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 200px;
+        
     }
 
 
@@ -725,6 +718,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        margin-left: -22px;
     }
 
     .features-title{
@@ -747,6 +741,18 @@ footer {
         width: 100%;
         height: 250px;
         margin: 20px auto;
+        
+    }
+
+    .swiper-hr{
+        display: none;
+    }
+
+    .swiper-pagination{
+        display: none;
+    }
+    .swiper-title{
+        margin-left: -40px;
     }
 
     .swiper-slide {
@@ -785,7 +791,7 @@ footer {
     .O-nas-list{
     display: flex;
     flex-wrap: wrap;
-    margin-left: -130px;
+    margin-left: -165px;
     gap: 35px;
       
         
@@ -801,11 +807,13 @@ footer {
     }
 
     .O-nas-desc{
-        font-size: 20px;
+        font-size: 15px;
         margin-top: 10px;
         margin-bottom: 40px;
-        margin-left: -30px;
-        margin-right: 20px;
+        
+        width: 100%;
+        margin-left: -33px;
+        width: 400px;
     }
 
 
@@ -819,7 +827,12 @@ footer {
 
 
     .container-Kontakt {
-        padding: 20px;
+        padding: 0px;
+        
+    }
+
+    #kontakt{
+       
     }
 
     .kontakt-title {
@@ -832,11 +845,13 @@ footer {
         flex-direction: column;
         margin-top: 40px;
         align-items: center;
+        margin-left: -50px;
     }
 
     .kontakt-img {
         width: 90%;
-        margin-left: 0;
+        margin-left: -10px;
+        
         border-radius: 15px;
     }
 
